@@ -1,25 +1,24 @@
 # Tab-Overflow
 
 
-Basic Features:   
+## Basic Features:   
 - Login and SignUp   
 - Add Activities   
 - Add Tasks inside activities   
 - Add URLs inside Tasks  
 - Search, Rename, Delete Activities  
 - Search, Rename, Delete Tasks 
-- Share Activities 
-- Share Tasks  
 - Display Tabs Opened Currently in the Browser (Real-Time) 
 
 
 
-Add-Ons:    
+## Add-Ons:    
 - Sorting tabs    
   - By Relevance (Using Artificial Neural Networks)    
   - Alphabetically
 - Dark Mode for better readability   
-
+- Share Activities 
+- Share Tasks
 
 
 Contributors:   
