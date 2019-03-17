@@ -86,20 +86,143 @@ function addemailid(database,emailId) {
 	
 }
 
-
-function getemailids(database,id) {
+function getemailidsactivity(database) {
 	var ref = firebase.database().ref();
 	
 	var keys=[];
 	var values=[];
 	
 	ref.once('value').then(function(snapshot){
-		var i=1;
-			snapshot.forEach(function(childSnapshot){
+		ul = document.getElementById("show_email_ids");
+	//var arr = get_all_email_ids();
+
+	for(var i=0;i<arr.length;i++)
+	{
+		var li = document.createElement("li");
+		li.appendChild(document.createTextNode(arr[i]));
+		li.setAttribute("value", arr[i]);
+		li.setAttribute("display", "none");
+		li.setAttribute("class", "list-group-item");
+		li.setAttribute("style", "width: 100%;");
+		li.onclick = function() {
+			document.getElementById("modal_text_input").value = this.innerHTML;
+			this.parentNode.style.display = "none";
+			//alert(document.getElementById("modal_text_input").value);
+		};
+		ul.appendChild(li);
+	}
+	ul.style.display = "none";
+
+	ul = document.getElementById("a_show_email_ids");
+	var arr = get_all_email_ids();
+	for(var i=0;i<arr.length;i++)
+	{
+		var li = document.createElement("li");
+		li.appendChild(document.createTextNode(arr[i]));
+		li.setAttribute("value", arr[i]);
+		li.setAttribute("display", "none");
+		li.setAttribute("class", "list-group-item");
+		li.setAttribute("style", "width: 100%;");
+		li.onclick = function() {
+			document.getElementById("a_modal_text_input").value = this.innerHTML;
+			this.parentNode.style.display = "none";
+			//alert(document.getElementById("modal_text_input").value);
+		};
+		ul.appendChild(li);
+	}
+	ul.style.display = "none";
+		// var i=1;
+		// 	snapshot.forEach(function(childSnapshot){
+		// 	k = childSnapshot.key;
+		// 	document.getElementById(id).innerHTML = k;
+		// 	i++;
+		// });
+    });
+}
+
+
+function getemailidstask(database) {
+	var ref = firebase.database().ref();
+	
+	var keys=[];
+	var values=[];
+	
+	ref.once('value').then(function(snapshot){
+		ul = document.getElementById("show_email_ids");
+		ul1 = document.getElementById("a_show_email_ids");
+	// var arr = get_all_email_ids();
+	snapshot.forEach(function(childSnapshot){
 			k = childSnapshot.key;
-			document.getElementById(id).innerHTML = k;
-			i++;
+			// document.getElementById(id).innerHTML = k;
+			var li = document.createElement("li");
+			li.appendChild(document.createTextNode(k));
+			li.setAttribute("value", k);
+			li.setAttribute("display", "none");
+			li.setAttribute("class", "list-group-item");
+			li.setAttribute("style", "width: 100%;");
+			li.onclick = function() {
+				document.getElementById("modal_text_input").value = this.innerHTML;
+				this.parentNode.style.display = "none";
+				//alert(document.getElementById("modal_text_input").value);
+			};
+
+			var li1 = document.createElement("li");
+			li1.appendChild(document.createTextNode(k));
+			li1.setAttribute("value", k);
+			li1.setAttribute("display", "none");
+			li1.setAttribute("class", "list-group-item");
+			li1.setAttribute("style", "width: 100%;");
+			li1.onclick = function() {
+				document.getElementById("a_modal_text_input").value = this.innerHTML;
+				this.parentNode.style.display = "none";
+				//alert(document.getElementById("modal_text_input").value);
+			};
+
+			ul.appendChild(li);
+			ul1.appendChild(li1);
+			// i++;
 		});
+	// for(var i=0;i<arr.length;i++)
+	// {
+	// 	var li = document.createElement("li");
+	// 	li.appendChild(document.createTextNode(arr[i]));
+	// 	li.setAttribute("value", arr[i]);
+	// 	li.setAttribute("display", "none");
+	// 	li.setAttribute("class", "list-group-item");
+	// 	li.setAttribute("style", "width: 100%;");
+	// 	li.onclick = function() {
+	// 		document.getElementById("modal_text_input").value = this.innerHTML;
+	// 		this.parentNode.style.display = "none";
+	// 		//alert(document.getElementById("modal_text_input").value);
+	// 	};
+	// 	ul.appendChild(li);
+	// }
+	ul.style.display = "none";
+
+	ul = document.getElementById("a_show_email_ids");
+	var arr = get_all_email_ids();
+	for(var i=0;i<arr.length;i++)
+	{
+		var li = document.createElement("li");
+		li.appendChild(document.createTextNode(arr[i]));
+		li.setAttribute("value", arr[i]);
+		li.setAttribute("display", "none");
+		li.setAttribute("class", "list-group-item");
+		li.setAttribute("style", "width: 100%;");
+		li.onclick = function() {
+			document.getElementById("a_modal_text_input").value = this.innerHTML;
+			this.parentNode.style.display = "none";
+			//alert(document.getElementById("modal_text_input").value);
+		};
+		ul.appendChild(li);
+	}
+	ul.style.display = "none";
+		// var i=1;
+		// 	snapshot.forEach(function(childSnapshot){
+		// 	k = childSnapshot.key;
+		// 	document.getElementById(id).innerHTML = k;
+		// 	i++;
+		// });
     });
 }
 

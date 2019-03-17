@@ -47,24 +47,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	document.getElementById("modal_btn_share").onclick = function() {
 		var to_email = document.getElementById("modal_text_input").value;
-		var from_email = "jaineel.ns@somaiya.edu";
+		var from_email = emailid;
 		task = current_task;
 		activity = current_task;
 		to_email = getvalidkey(to_email);
 		from_email = getvalidkey(from_email);
 		sharetask(database,from_email,to_email,activity,task);
-		// alert(to_email + " " + from_email + " " + task + " " + activity);
+		 // alert(to_email + " " + from_email + " " + task + " " + activity);
 	};
 
 	document.getElementById("a_modal_btn_share").onclick = function() {
 		var to_email = document.getElementById("a_modal_text_input").value;
-		var from_email = "jaineel.ns@somaiya.edu";
+		var from_email = emailid;
 		//task = current_task;
 		to_email = getvalidkey(to_email);
 		from_email = getvalidkey(from_email);
 		activity = document.getElementById("select_activity").value;
 		shareactivity(database,from_email,to_email,activity);
-		// alert(to_email + " " + from_email + " " + activity);
+		 // alert(to_email + " " + from_email + " " + activity);
 	};
 
 
@@ -1052,43 +1052,45 @@ function view_tasks_of_activity(activityName)
 
 function populate_email_ids_in_ul_for_searching()
 {
-	ul = document.getElementById("show_email_ids");
-	var arr = get_all_email_ids();
-	for(var i=0;i<arr.length;i++)
-	{
-		var li = document.createElement("li");
-		li.appendChild(document.createTextNode(arr[i]));
-		li.setAttribute("value", arr[i]);
-		li.setAttribute("display", "none");
-		li.setAttribute("class", "list-group-item");
-		li.setAttribute("style", "width: 100%;");
-		li.onclick = function() {
-			document.getElementById("modal_text_input").value = this.innerHTML;
-			this.parentNode.style.display = "none";
-			//alert(document.getElementById("modal_text_input").value);
-		};
-		ul.appendChild(li);
-	}
-	ul.style.display = "none";
+	getemailidstask(database);
+	//getemailidsactivity(database);
+	// ul = document.getElementById("show_email_ids");
+	// var arr = get_all_email_ids();
+	// for(var i=0;i<arr.length;i++)
+	// {
+	// 	var li = document.createElement("li");
+	// 	li.appendChild(document.createTextNode(arr[i]));
+	// 	li.setAttribute("value", arr[i]);
+	// 	li.setAttribute("display", "none");
+	// 	li.setAttribute("class", "list-group-item");
+	// 	li.setAttribute("style", "width: 100%;");
+	// 	li.onclick = function() {
+	// 		document.getElementById("modal_text_input").value = this.innerHTML;
+	// 		this.parentNode.style.display = "none";
+	// 		//alert(document.getElementById("modal_text_input").value);
+	// 	};
+	// 	ul.appendChild(li);
+	// }
+	// ul.style.display = "none";
 
-	ul = document.getElementById("a_show_email_ids");
-	var arr = get_all_email_ids();
-	for(var i=0;i<arr.length;i++)
-	{
-		var li = document.createElement("li");
-		li.appendChild(document.createTextNode(arr[i]));
-		li.setAttribute("value", arr[i]);
-		li.setAttribute("display", "none");
-		li.setAttribute("class", "list-group-item");
-		li.setAttribute("style", "width: 100%;");
-		li.onclick = function() {
-			document.getElementById("a_modal_text_input").value = this.innerHTML;
-			this.parentNode.style.display = "none";
-			//alert(document.getElementById("modal_text_input").value);
-		};
-		ul.appendChild(li);
-	}
-	ul.style.display = "none";
+	// ul = document.getElementById("a_show_email_ids");
+	// var arr = get_all_email_ids();
+	// for(var i=0;i<arr.length;i++)
+	// {
+	// 	var li = document.createElement("li");
+	// 	li.appendChild(document.createTextNode(arr[i]));
+	// 	li.setAttribute("value", arr[i]);
+	// 	li.setAttribute("display", "none");
+	// 	li.setAttribute("class", "list-group-item");
+	// 	li.setAttribute("style", "width: 100%;");
+	// 	li.onclick = function() {
+	// 		document.getElementById("a_modal_text_input").value = this.innerHTML;
+	// 		this.parentNode.style.display = "none";
+	// 		//alert(document.getElementById("modal_text_input").value);
+	// 	};
+	// 	ul.appendChild(li);
+	// }
+	// ul.style.display = "none";
 }
 
 
@@ -1107,8 +1109,9 @@ function hide_all_email_ids()
 
 function get_all_email_ids()
 {
+
 	//funtcn to get all email ids from database
-	arr = ["amit.mahajan@somaiya.edu", "akshay.kotak@somaiya.edu", "atharva.gole@somaiya.edu", "harshal.ad@somaiya.edu", "jaineel.ns@somaiya.edu"];
+	// arr = ["amit.mahajan@somaiya.edu", "akshay.kotak@somaiya.edu", "atharva.gole@somaiya.edu", "harshal.ad@somaiya.edu", "jaineel.ns@somaiya.edu"];
 	return arr;
 }
 

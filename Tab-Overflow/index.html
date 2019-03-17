@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <head>
-	<title>Home</title>
+    <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <meta name="google-signin-scope" content="profile email">
+    <!-- <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="1051158247148-pnsimm52hgtvqaoaqj94guertn7ffsio.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="/oauth2/oauth2.js"></script>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-
+    <!-- <script type="text/javascript" src="LocalStorageHandler/LocalStorageHandler.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="popup.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap.min.js"></script>
@@ -28,11 +30,46 @@
         }
     </style> -->
 </head>
-<body>
-	<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+<body style="width: 300px; height: 200px;">
+    <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
     <div class="container">
+        <div id="yet_to_login" style="display: block;">
+            <div class="button_of_selection">
+                <button class="btn btn-primary" value="login" id="login_button">Login</button>
+                <button class="btn btn-success" value="signup" id="signup_button">Signup</button>
+            </div>
+            <div class="login_form_div" id="login_form_div" style="display: none;">
+                <h2 class="jumbotron">Login</h2>
+                <div class="form-group">
+                    <label for="login_emailId">Username</label>
+                    <input type="text" class="form-control" id="login_emailId" name="login_emailId">
+                </div>
+                <div class="form-group">
+                    <label for="login_password">Password</label>
+                    <input type="password" class="form-control" id="login_password" name="login_password">
+                </div>
+                <button class="btn btn-default" id="login_submit">Submit</button>
+            </div>
+            <div class="signup_form_div" id="signup_form_div" style="display: none;">
+                <h2 class="jumbotron">Signup</h2>
+                <div class="form-group">
+                    <label for="signup_emailId">Username</label>
+                    <input type="text" class="form-control" id="signup_emailId" name="signup_emailId">
+                </div>
+                <div class="form-group">
+                    <label for="signup_password">Password</label>
+                    <input type="password" class="form-control" id="signup_password" name="signup_password">
+                </div>
+                <button class="btn btn-default" id="signup_submit">Submit</button>
+            </div>
+        </div>
+        <div id="loggedin" style="display: none;">
+            <button class="btn btn-danger" id="signout_button" value="signout">Signout</button>
+        </div>
+        <!--
         <h4>Go to Options Page</h4>
         <button id="btn" class="btn btn-primary">Click Me</button>
+        -->
     </div>
 </body>
 </html>
