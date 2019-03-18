@@ -16,9 +16,17 @@ age: 20
 */
 
 var database;
-var emailid = "jaineel.ns@somaiya.edu";
+var emailid;
+
+// addemailid(database,emailid);
+
+chrome.storage.sync.get('loggedinuser',function(result) {
+	emailid=result.loggedinuser;
+	addemailid(database,emailid);
+	firebasetolocalstorage();
+});
+
 database = initialize();
-addemailid(database,emailid);
 
 function initialize() {
 	
@@ -198,26 +206,9 @@ function getemailidstask(database) {
 	// 	ul.appendChild(li);
 	// }
 	ul.style.display = "none";
+	ul1.style.display = "none";
 
-	ul = document.getElementById("a_show_email_ids");
-	var arr = get_all_email_ids();
-	for(var i=0;i<arr.length;i++)
-	{
-		var li = document.createElement("li");
-		li.appendChild(document.createTextNode(arr[i]));
-		li.setAttribute("value", arr[i]);
-		li.setAttribute("display", "none");
-		li.setAttribute("class", "list-group-item");
-		li.setAttribute("style", "width: 100%;");
-		li.onclick = function() {
-			document.getElementById("a_modal_text_input").value = this.innerHTML;
-			this.parentNode.style.display = "none";
-			//alert(document.getElementById("modal_text_input").value);
-		};
-		ul.appendChild(li);
-	}
-	ul.style.display = "none";
-		// var i=1;
+			// var i=1;
 		// 	snapshot.forEach(function(childSnapshot){
 		// 	k = childSnapshot.key;
 		// 	document.getElementById(id).innerHTML = k;
@@ -339,10 +330,12 @@ function sharetask(database,emailid1,emailid2,activity,task) {
 	emailid2=getvalidkey(emailid2);
 	var shared_activity=task;
 	alert(emailid1+"  " + emailid2);
+	console.log(globaldatabase+" "+activity)
 	addactivity(database,emailid2,shared_activity);
 	addtask(database,emailid2,shared_activity,task);
 		for(var id in globaldatabase[activity][task]) {
 			for(var url in globaldatabase[activity][task][id]) {
+				console.log("098 "+id+" "+globaldatabase[activity][task][id]);
 				addURL(database,emailid2,shared_activity,task,id,globaldatabase[activity][task][id]);
 			}
 		}	
@@ -606,7 +599,7 @@ function removeempty() {}
 
 // initialize();
 console.log(8888881111111);
-firebasetolocalstorage();
+// firebasetolocalstorage();
 
 document.addEventListener("DOMContentLoaded", function(){
 	//initialize();

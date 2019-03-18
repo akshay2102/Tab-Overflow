@@ -37,19 +37,25 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	document.getElementById("off").addEventListener('click', function() {
 		var bodybg = document.getElementById("demo");
-		bodybg.setAttribute('style', 'background-color : yellow;')
+		bodybg.setAttribute('style', 'background-color : #b7b7b7;');
+		var bor = document.getElementsByClassName("major")[0];
+		bor.setAttribute('style', 'border: 5px solid black;');
+		// bodybg.setAttribute('style', 'border : 5px solid black;')
 	});
 
 	document.getElementById("on").addEventListener('click', function() {
 		var bodybg = document.getElementById("demo");
-		bodybg.setAttribute('style', 'background-color : black;')
+		bodybg.setAttribute('style', 'background-color : black;');
+		var bor = document.getElementsByClassName("major")[0];
+		bor.setAttribute('style', 'border: 5px solid white;')
+
 	});
 
 	document.getElementById("modal_btn_share").onclick = function() {
 		var to_email = document.getElementById("modal_text_input").value;
 		var from_email = emailid;
 		task = current_task;
-		activity = current_task;
+		activity = document.getElementById("select_activity").value;
 		to_email = getvalidkey(to_email);
 		from_email = getvalidkey(from_email);
 		sharetask(database,from_email,to_email,activity,task);
@@ -1107,11 +1113,12 @@ function hide_all_email_ids()
 	ul.style.display = "none";
 }
 
+
 function get_all_email_ids()
 {
 
 	//funtcn to get all email ids from database
 	// arr = ["amit.mahajan@somaiya.edu", "akshay.kotak@somaiya.edu", "atharva.gole@somaiya.edu", "harshal.ad@somaiya.edu", "jaineel.ns@somaiya.edu"];
-	return arr;
+	//return arr;
 }
 

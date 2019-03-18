@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function(){
 		//alert("inside btn click");
 		//console.log("inside btn click");
 		var uname = document.getElementById('login_emailId').value;
-		var pass = document.getElementById('login_password').value;
+		// var pass = document.getElementById('login_password').value;
 		//alert(uname+" "+pass);
-		checkValidity(uname,pass);
+		checkValidity(uname,"");
 
 	};
 
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		// document.getElementById("loggedin").style.display = "block";
 		// var url = "chrome-extension://"+chrome.runtime.id+"/home.html";
 		// chrome.tabs.create({url: url});
-		var key = getvalidkey(uname+"----"+pass);
+		var key = getvalidkey(uname);
 		chrome.storage.sync.set({"loggedinuser":key}, function() {
 				document.getElementById("yet_to_login").style.display = "none";
 				document.getElementById("loggedin").style.display = "block";
