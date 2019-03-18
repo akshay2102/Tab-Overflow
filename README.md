@@ -16,7 +16,7 @@
 
 ## Add-Ons:    
 - Sorting tabs    
-  - By Relevance (Using Artificial Neural Networks)    
+  - By Relevance (Using Artificial Neural Networks - for training, we created our own dataset)    
   - Alphabetically
 - Dark Mode for better readability   
 - Share Activities 
