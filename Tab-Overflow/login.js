@@ -43,7 +43,7 @@ function getvalidkey(key) {
 //changes
 function checkValidity(username, password){
 	var ref = database.ref();
-	var key = getvalidkey(username+"----"+password);
+	var key = getvalidkey(username);
 	ref.once('value').then(function(snapshot){
 		//alert(key);
 		//console.log(key);
