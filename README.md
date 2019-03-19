@@ -11,8 +11,11 @@
 - Display Tabs Opened Currently in the Browser (Real-Time) 
 
 
-## A little preview
-![](mh2.gif)
+## Sorting
+![](sorting.gif)
+
+## Over-view
+![](tab-overflow.gif)
 
 ## Add-Ons:    
 - Sorting tabs    
