@@ -29,9 +29,10 @@
 - Share Tasks
 
 ## Future Work:
+- Notifying user when a 'task/activity' is shared with them.
 - Improving GUI
 - Adding user friendly features like "Delete All" & "Save All" buttons
-- Adding collaborators
+- Adding collaborators for an activity
 
 ## Contributors:   
 - @amitmahajan29  
