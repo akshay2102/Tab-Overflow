@@ -34,8 +34,8 @@
 - Adding collaborators
 
 ## Contributors:   
-- @amitmahajan29  
-- @akshay2102    
-- @atharvagole   
-- @harshaldedhia   
-- @Ye11ow-Flash    
+- [@amitmahajan29](https://github.com/amitmahajan29)  
+- [@akshay2102](https://github.com/akshay2012)    
+- [@atharvagole](https://github.com/AtharvaGole)   
+- [@harshaldedhia](https://github.com/harshaldedhia)
+- [@Ye11ow-Flash](https://github.com/Ye11ow-Flash) 
