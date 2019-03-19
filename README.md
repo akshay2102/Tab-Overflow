@@ -11,11 +11,14 @@
 - Display Tabs Opened Currently in the Browser (Real-Time) 
 
 
-## Sorting
+## Sorting:
 ![](sorting.gif)
 
-## Over-view
+## Over-view:
 ![](tab-overflow.gif)
+
+## Login:
+![](login.gif)
 
 ## Add-Ons:    
 - Sorting tabs    
@@ -25,6 +28,10 @@
 - Share Activities 
 - Share Tasks
 
+## Future Work:
+- Improving GUI
+- Adding user friendly features like "Delete All" & "Save All" buttons
+- Adding collaborators
 
 ## Contributors:   
 - @amitmahajan29  
