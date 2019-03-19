@@ -1,5 +1,5 @@
 # Tab-Overflow
-
+Chrome - Extension to manage your tabs. Save them, use anywhere in the world, Real - time sorting of tabs. Sharing with other registered users.
 
 ## Basic Features:   
 - Login and SignUp   
@@ -10,6 +10,8 @@
 - Search, Rename, Delete Tasks 
 - Display Tabs Opened Currently in the Browser (Real-Time) 
 
+## Installation:
+As this is an chrome - extension, there is nothing to install. Just load the plugin and start working.
 
 ## Sorting:
 ![](sorting.gif)
@@ -29,9 +31,10 @@
 - Share Tasks
 
 ## Future Work:
+- Notifying user when a 'task/activity' is shared with them.
 - Improving GUI
 - Adding user friendly features like "Delete All" & "Save All" buttons
-- Adding collaborators
+- Adding collaborators for an activity
 
 ## Contributors:   
 - [@amitmahajan29](https://github.com/amitmahajan29)  
