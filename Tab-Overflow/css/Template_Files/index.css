@@ -123,9 +123,9 @@
 
 .major {
 	height: 82%;
-    border: 5px solid white;
-    border-radius: 15px;
-    padding: 15px;
+  border: 5px solid white;
+  border-radius: 15px;
+  padding: 15px;
 }
 .pricingTable {
 	height: 95%;
@@ -210,17 +210,20 @@
 }
 .inner-bb {
 	display: inline-block;
+  float: right;
 }
 .sort_btn {
 	width: 100%;
-	margin-right: -10%;
+	margin-right: 15%;
+  margin-top: 7%;
 }
 #s-b-1 {
-	margin-bottom: -8%;
-    margin-top: -21%;
+	/*margin-bottom: -8%;*/
+    /*margin-top: 3%;*/
+    /*margin-right: 3%;*/
 }
 #s-b-2 {
-	margin-bottom: 4%;
+	/*margin-bottom: 4%;*/
 }
 
 
@@ -375,3 +378,6 @@ input:checked + .slider:before {
 	height: 3em;
 }
 
+.modal-title {
+  font-size: 50px;
+}
