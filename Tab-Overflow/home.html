@@ -53,11 +53,10 @@
 </nav> -->
 <div id="extra_buttons" style="background: rgb(174, 0, 61);">
   <div style="width: 100%;">
-    <img class="animate infinite fadeInLeft delay-2s" src="logo.png" alt="LOGO" id="logo-image">
-    <div class="bb">
-    <!-- <p id="tab-overflow">Tab - Overflow</p> -->
-    <!-- <img src="scrr1.png" alt="LOGO" id="tp-img"> -->
-    </div>
+  	<marquee direction="right" style="width: 85%" scrollamount="30">
+    	<img src="logo.png" alt="LOGO" id="logo-image">
+	</marquee>
+
     <div class="inner-bb">
       <button id="s-b-1" class="btn btn-default btn-lg sort_btn" style="float: right;">
             <span class="glyphicon glyphicon-sort"></span>Relevance
@@ -68,19 +67,8 @@
       </button>
     </div>
   </div>
-  <!-- <div style="width: 100%;">
-    <button type="button" class="btn btn-default btn-lg" id="redo" style="float: right;">
-      <span style="align-items: center;" class="glyphicon glyphicon-menu-right"></span>
-    </button>
-
-    <button type="button" class="btn btn-default btn-lg" id="undo" style="float: right;">
-      <span style="align-items: center;" class="glyphicon glyphicon-menu-left"></span>
-    </button>
-  </div>
-  <button type="button" class="btn btn-default btn-lg" style="float: right;">
-    <span style="align-items: center;" class="glyphicon glyphicon-share">SHARE</span>
-  </button> -->
 </div>
+
 <div class="demo" id="demo">
     <div class="container">
         <div class="row" style="padding:10px;">
@@ -108,7 +96,7 @@
           <label for="na" class="disabled" onclick="">&nbsp;</label> -->
 
           <input id="off" name="state-d" type="radio" style="background-color: #87ceeb;"/>
-          <label for="off" class="tog-lab">Light</label>
+          <label for="off" class="tog-lab" onclick="">Light</label>
 
           <a></a>
         </div>
