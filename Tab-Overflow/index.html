@@ -30,16 +30,18 @@
         }
     </style> -->
 </head>
-<body style="width: 300px; height: 200px;">
+<body style="width: 300px; height: auto; margin-bottom: 5%;">
     <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
     <div class="container">
         <div id="yet_to_login" style="display: block;">
-            <div class="button_of_selection">
-                <button class="btn btn-primary" value="login" id="login_button">Login</button>
-                <button class="btn btn-success" value="signup" id="signup_button">Signup</button>
+            <div class="button_of_selection" style="border-bottom: 1px solid black; padding-bottom: 2px;">
+                <button class="btn btn-primary" value="login" id="login_button" style="margin-top: 5%; margin-left: 15%;">Login</button>
+                <button class="btn btn-success" value="signup" id="signup_button" style="margin-top: 5%;
+                margin-left: 21%;">Signup</button>
             </div>
             <div class="login_form_div" id="login_form_div" style="display: none;">
-                <h2 class="jumbotron">Login</h2>
+                <!-- <h2 class="jumbotron">Login</h2> -->
+                <img src="logo.png" alt="LOGO" style="height: 30%; padding-top: 10px; width: 30%;"><h2 class="jumbotron" style="display: inline; height: 30%; padding-top: 2px; font-size: 50px; margin-left: 15px;">Login</h2>
                 <div class="form-group">
                     <label for="login_emailId">Username</label>
                     <input type="text" class="form-control" id="login_emailId" name="login_emailId">
@@ -48,10 +50,11 @@
                     <label for="login_password">Password</label>
                     <input type="password" class="form-control" id="login_password" name="login_password">
                 </div>
-                <button class="btn btn-default" id="login_submit">Submit</button>
+                <button class="btn btn-default" id="login_submit" style="padding-bottom: 6px;
+                margin-bottom: 15px;">Submit</button>
             </div>
             <div class="signup_form_div" id="signup_form_div" style="display: none;">
-                <h2 class="jumbotron">Signup</h2>
+                <img src="logo.png" alt="LOGO" style="height: 30%; padding-top: 10px; width: 30%;"><h2 class="jumbotron" style="display: inline; height: 30%; padding-top: 2px; font-size: 50px;">Signup</h2>
                 <div class="form-group">
                     <label for="signup_emailId">Username</label>
                     <input type="text" class="form-control" id="signup_emailId" name="signup_emailId">
@@ -60,7 +63,8 @@
                     <label for="signup_password">Password</label>
                     <input type="password" class="form-control" id="signup_password" name="signup_password">
                 </div>
-                <button class="btn btn-default" id="signup_submit">Submit</button>
+                <button class="btn btn-default" id="signup_submit" style="padding-bottom: 6px;
+                margin-bottom: 15px;">Submit</button>
             </div>
         </div>
         <div id="loggedin" style="display: none;">
